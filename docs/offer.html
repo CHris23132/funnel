@@ -490,29 +490,36 @@
             <div class="offer-content">
                 <div class="offer-details">
                     <div class="price">Join Our Community</div>
-                    <div class="original-price">Starting at $5/month</div>
+                    <div class="original-price" style="margin-bottom: 0.5rem;">Starting at $5/month</div>
                 </div>
-                <div class="features">
-                    <div class="feature-item">Access Recorded Course Material</div>
-                    <div class="feature-item">Downloadable Project Files & Code</div>
-                    <div class="feature-item">E-Books & Class Assets</div>
-                    <div class="feature-item">Discord Community Support</div>
-                    <div class="feature-item">Monthly Ask Me Anything Sessions</div>
-                    <div class="feature-item">Higher Tiers: Group Classes & 1-on-1 Training</div>
+                <div class="features" style="margin: 0.5rem 0;">
+                    <div class="feature-item" style="margin-bottom: 0.5rem;">Access Recorded Course Material</div>
+                    <div class="feature-item" style="margin-bottom: 0.5rem;">Downloadable Project Files & Code</div>
+                    <div class="feature-item" style="margin-bottom: 0.5rem;">E-Books & Class Assets</div>
+                    <div class="feature-item" style="margin-bottom: 0.5rem;">Discord Community Support</div>
+                    <div class="feature-item" style="margin-bottom: 0.5rem;">Monthly Ask Me Anything Sessions</div>
+                    <div class="feature-item" style="margin-bottom: 0.5rem;">Higher Tiers: Group Classes & 1-on-1 Training</div>
                 </div>
                 <div class="class-preview-image">
-                    <img src="images/class-pic.png" alt="Class Preview" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; margin: 1rem 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <img src="images/class-pic.png" alt="Class Preview" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; margin: 0.5rem 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                 </div>
                 <a href="https://patreon.com/ChristopherWalshApps" 
                    class="class-button" 
-                   style="display: block; margin-bottom: 1rem; text-decoration: none;"
-                   onclick="ttq.track('Subscribe')">
+                   style="display: block; margin: 0.5rem 0; text-decoration: none; padding: 1.2rem; font-size: 1.2rem; background: var(--primary-color);">
                     Join on Patreon
                 </a>
-                <div class="guarantee">Join our growing community of developers!</div>
-                <div class="class-buttons">
-                    <button class="class-button" onclick="gtag_report_conversion_web(); Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/talk-to-computer-make-apps-class'})">Join Class Web</button>
-                    <button class="class-button" onclick="gtag_report_conversion_ios(); Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/build-first-ios-app'})">Join Class iOS</button>
+                <div class="guarantee" style="margin: 0.5rem 0; font-size: 0.8rem;">Join our growing community of developers!</div>
+                <div class="class-buttons" style="display: flex; gap: 0.5rem;">
+                    <button class="class-button" 
+                            style="padding: 0.5rem; font-size: 0.9rem; background: rgba(239, 68, 68, 0.8);"
+                            onclick="gtag_report_conversion_web(); Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/talk-to-computer-make-apps-class'})">
+                        Join Class Web
+                    </button>
+                    <button class="class-button" 
+                            style="padding: 0.5rem; font-size: 0.9rem; background: rgba(239, 68, 68, 0.8);"
+                            onclick="gtag_report_conversion_ios(); Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/build-first-ios-app'})">
+                        Join Class iOS
+                    </button>
                 </div>
             </div>
         </div>
