@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Your E-Book & Explore Our Classes - Talk to Computer, Make Apps</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon/FavIcon.png">
+    <link rel="shortcut icon" type="image/png" href="favicon/FavIcon.png">
+    
+    <!-- TikTok Pixel Code Start -->
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+      ttq.load('CUJ9HV3C77U7V3T8P0CG');
+      ttq.page();
+      
+      // Track successful purchase conversion
+      ttq.track('CompletePayment', {
+          content_type: 'product',
+          content_name: 'Talk to Computer, Make Apps',
+          content_id: 'ebook-1',
+          value: 1.00,
+          currency: 'USD',
+          quantity: 1,
+          status: 'success'
+      });
+    }(window, document, 'ttq');
+    </script>
+    <!-- TikTok Pixel Code End -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #FF4444;
+            --accent-color: #2563EB;
+            --text-color: #1F2937;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            min-height: 100vh;
+            color: var(--text-color);
+        }
+
+        .success-header {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .success-message {
+            color: #059669;
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .download-title {
+            color: var(--text-color);
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .download-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 1.25rem 3rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(239, 68, 68, 0.2);
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(239, 68, 68, 0.3);
+        }
+
+        .main-content {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .offer-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .offer-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #FF4444, #FF8888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .offer-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-container {
+            flex: 1;
+            max-width: 450px;
+            aspect-ratio: 9/16;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.3s ease;
+            height: 800px;
+        }
+
+        .video-container:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .tiktok-embed {
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 20px !important;
+            overflow: hidden !important;
+        }
+
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .class-info {
+            flex: 1;
+            max-width: 450px;
+            min-height: 800px;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 20px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            transform: perspective(1000px) rotateY(5deg);
+            transition: transform 0.3s ease;
+        }
+
+        .class-info:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .class-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .class-details h2 {
+            color: var(--text-color);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .schedule-list {
+            margin: 1.5rem 0;
+        }
+
+        .schedule-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .schedule-item:before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .curriculum-button {
+            display: inline-block;
+            width: 100%;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .curriculum-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(239, 68, 68, 0.2);
+        }
+
+        .class-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+
+        .class-button {
+            flex: 1;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .class-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(239, 68, 68, 0.2);
+        }
+
+        @media (max-width: 968px) {
+            .content-container {
+                flex-direction: column;
+            }
+
+            .download-title {
+                font-size: 2rem;
+            }
+
+            .offer-title {
+                font-size: 2rem;
+            }
+
+            .video-container,
+            .class-info {
+                width: 100%;
+                max-width: 400px;
+                transform: none;
+                min-height: auto;
+            }
+
+            .video-container {
+                height: 600px;
+            }
+
+            .video-container:hover,
+            .class-info:hover {
+                transform: none;
+            }
+        }
+
+        .about-section {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.3s ease;
+        }
+
+        .about-image-container:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+        }
+
+        .about-content {
+            color: white;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #FF4444, #FF8888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        @media (max-width: 968px) {
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image-container {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .about-title {
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-header">
+        <div class="success-message">Payment Successful!</div>
+        <h1 class="download-title">Your E-Book is Ready!</h1>
+        <a href="/PDF/e-book/Talk To the computer - Make Apps.pdf" class="download-button" download>
+            Download E-Book Now
+        </a>
+    </div>
+
+    <div class="main-content">
+        <div class="offer-header">
+            <h2 class="offer-title">Ready to Take Your Skills Further?</h2>
+            <p class="offer-subtitle">Join our live online bootcamps and build real-world projects with expert guidance</p>
+        </div>
+
+        <div class="content-container">
+            <div class="video-container">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@christopher.walsh.apps/video/7470289804802985271" data-video-id="7470289804802985271">
+                    <section>
+                        <a target="_blank" title="@christopher.walsh.apps" href="https://www.tiktok.com/@christopher.walsh.apps?refer=embed">@christopher.walsh.apps</a>
+                    </section>
+                </blockquote>
+                <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+            <div class="class-info">
+                <div class="class-content">
+                    <div class="class-details">
+                        <h2>Online Bootcamp Programs</h2>
+                        <div class="schedule-list">
+                            <div class="schedule-item">Build Your First Website - Web Development</div>
+                            <div class="schedule-item">Every Monday & Wednesday</div>
+                            <div class="schedule-item">Build Your First iOS App - iOS Development</div>
+                            <div class="schedule-item">Comprehensive Curriculum</div>
+                            <div class="schedule-item">First 2 Video Lessons Free</div>
+                            <div class="schedule-item">Live Online Classes</div>
+                            <div class="schedule-item">Hands-on Project Building</div>
+                            <div class="schedule-item">Expert Guidance & Support</div>
+                        </div>
+                        <a href="https://make-app-class.my.canva.site/" class="curriculum-button" target="_blank">
+                            View Curriculum
+                        </a>
+                        <div class="class-buttons">
+                            <button class="class-button" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/talk-to-computer-make-apps-class'})">Join Class Web</button>
+                            <button class="class-button" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/build-first-ios-app'})">Join Class iOS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-image-container">
+                <img src="Images/headshot-despill-2.png" alt="Christopher Walsh" class="about-image">
+            </div>
+            <div class="about-content">
+                <h2 class="about-title">About Christopher</h2>
+                <p class="about-text">Self-taught web entrepreneur and developer. Christopher has been a self-directed learner dating back to the mastery of music production back in his early career as an 18-year-old operating Pro Tools at a music studio in Toronto. From there, he was hired by an animation studio to create animations and 3D scenes for an animated show in Blender 3D.</p>
+                <p class="about-text">Chris found his true medium in development when he first set out to build an AR application inspired by his love for stop-motion animation. This led him into iOS Xcode development and eventually into <span class="about-highlight">full financial independence from web-based projects and remote work</span>.</p>
+                <p class="about-text">Chris has started a few app startups such as Stop Motion AR and Margaret, both iOS apps currently available on the App Store with paying annual users. Chris created a formula to start with and use a plan and framework to learn how to pick up useful skills such as web development, automation, workflows and app development.</p>
+                <p class="about-text">For Christopher, it all started with learning the core concepts taught in the book and course. Don't believe me? This website was built following the proven method and Christopher guarantees this method - <span class="about-highlight">the same success can be yours today</span>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendly scripts -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</body>
+</html> 

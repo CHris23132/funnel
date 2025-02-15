@@ -104,7 +104,111 @@
 
         .header {
             text-align: center;
-            margin-bottom: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            background: linear-gradient(
+                300deg,
+                #FF4444 0%,
+                #FF8888 25%,
+                #FF4444 50%,
+                #FF8888 75%,
+                #FF4444 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 3s linear infinite;
+            text-shadow: 
+                0 0 20px rgba(255, 68, 68, 0.1),
+                0 0 40px rgba(255, 68, 68, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: radial-gradient(
+                circle at center,
+                rgba(255, 68, 68, 0.1) 0%,
+                transparent 70%
+            );
+            z-index: -1;
+            filter: blur(10px);
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .hero-title-container {
+            position: relative;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        .hero-title-container::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, 
+                rgba(255, 68, 68, 0.1),
+                rgba(255, 136, 136, 0.1)
+            );
+            border-radius: 10px;
+            filter: blur(20px);
+            z-index: -1;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-video {
+            max-width: 350px;
+            height: 400px;
+            margin: 0.5rem auto;
+        }
+
+        .download-button {
+            margin-top: 1rem;
         }
 
         .title {
@@ -381,29 +485,26 @@
                 font-size: 2rem;
             }
         }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-video {
+                height: 350px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1 class="title">Don't Miss Out! Join the 'How to Build an iOS App' Class on Sunday, February 16, 2025!</h1>
-        <p class="subtitle">Transform Your Future with Software Development.</p>
-        <div class="timer">Proven Success - Act Now!</div>
-        <div class="class-buttons" style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
-            <button class="class-button" 
-                    style="padding: 0.8rem 1.5rem; font-size: 1rem; background: var(--primary-color); max-width: 200px;"
-                    onclick="gtag_report_conversion_web(); Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/talk-to-computer-make-apps-class'})">
-                Join Class Web
-            </button>
-            <button class="class-button" 
-                    style="padding: 0.8rem 1.5rem; font-size: 1rem; background: var(--primary-color); max-width: 200px;"
-                    onclick="gtag_report_conversion_ios(); Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/build-first-ios-app'})">
-                Join Class iOS
-            </button>
+        <div class="hero-title-container">
+            <h1 class="hero-title">You can do it too, Download the Free E-Book and get started</h1>
         </div>
-    </div>
-    
-    <div class="content-container">
-        <div class="video-container">
+        <p class="hero-subtitle" style="font-weight: 600; margin-bottom: 1.5rem;">Transform Your Future with Software Development</p>
+        
+        <div class="hero-video">
             <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@christopher.walsh.apps/video/7469860283628916023" data-video-id="7469860283628916023">
                 <section>
                     <a target="_blank" title="@christopher.walsh.apps" href="https://www.tiktok.com/@christopher.walsh.apps?refer=embed">@christopher.walsh.apps</a> Make apps and websites Using Code, without knowing how to Code 
@@ -411,7 +512,51 @@
                     <a title="makemoneyonline" target="_blank" href="https://www.tiktok.com/tag/makemoneyonline?refer=embed">#makemoneyonline</a> 
                     <a title="remotework" target="_blank" href="https://www.tiktok.com/tag/remotework?refer=embed">#remotework</a> 
                     <a title="education" target="_blank" href="https://www.tiktok.com/tag/education?refer=embed">#education</a> 
-                    <a target="_blank" title="♬ original sound - Chris St. John" href="https://www.tiktok.com/music/original-sound-7469860321623116549?refer=embed">♬ original sound - Chris St. John</a>
+                </section>
+            </blockquote>
+        </div>
+
+        <a href="https://buy.stripe.com/7sI9BS9sWfIf38kaEK" 
+           class="download-button" 
+           style="display: inline-block; 
+                  background: var(--primary-color); 
+                  color: white; 
+                  padding: 1.2rem 3rem; 
+                  font-size: 1.3rem; 
+                  font-weight: 700; 
+                  border-radius: 12px; 
+                  text-decoration: none; 
+                  transition: all 0.3s ease;
+                  box-shadow: 0 4px 6px rgba(239, 68, 68, 0.2);
+                  margin: 2rem 0 1rem;">
+            Download Free E-Book
+        </a>
+
+        <div class="next-class-info" style="
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);">
+            <h2 style="color: white; font-size: 1.2rem; margin-bottom: 0.5rem;">
+                Next Class: iOS App Development
+            </h2>
+            <p style="color: rgba(255, 255, 255, 0.9); font-size: 1rem;">
+                Sunday, February 16, 2025
+            </p>
+        </div>
+    </div>
+    
+    <div class="content-container">
+        <div class="video-container">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@christopher.walsh.apps/video/7470289804802985271" data-video-id="7470289804802985271">
+                <section>
+                    <a target="_blank" title="@christopher.walsh.apps" href="https://www.tiktok.com/@christopher.walsh.apps?refer=embed">@christopher.walsh.apps</a> 90% of courses are a scam, so that's why I wrote a book and run a class.  We do live app building together so we make sure the customer actually gets the skills they wanted from the course or "self guided" learning. For a workshop live online every Monday and Wednesday 6pm (EST)Hosted every Monday & Wednesday build first website and every Saturday and Sunday for build first iOS app. 
+                    <a title="software" target="_blank" href="https://www.tiktok.com/tag/software?refer=embed">#software</a> 
+                    <a title="remotework" target="_blank" href="https://www.tiktok.com/tag/remotework?refer=embed">#remotework</a> 
+                    <a title="makemoneyonline" target="_blank" href="https://www.tiktok.com/tag/makemoneyonline?refer=embed">#makemoneyonline</a> 
+                    <a title="education" target="_blank" href="https://www.tiktok.com/tag/education?refer=embed">#education</a> 
                 </section>
             </blockquote>
             <script async src="https://www.tiktok.com/embed.js"></script>
@@ -439,6 +584,19 @@
                     Join on Patreon
                 </a>
                 <div class="guarantee" style="margin: 0.5rem 0; font-size: 0.8rem;">Join our growing community of developers!</div>
+                
+                <div class="class-buttons" style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem;">
+                    <button class="class-button" 
+                            style="padding: 0.8rem 1.5rem; font-size: 0.9rem; background: rgba(239, 68, 68, 0.8);"
+                            onclick="gtag_report_conversion_web(); Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/talk-to-computer-make-apps-class'})">
+                        Join Class Web
+                    </button>
+                    <button class="class-button" 
+                            style="padding: 0.8rem 1.5rem; font-size: 0.9rem; background: rgba(239, 68, 68, 0.8);"
+                            onclick="gtag_report_conversion_ios(); Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/build-first-ios-app'})">
+                        Join Class iOS
+                    </button>
+                </div>
             </div>
         </div>
     </div>
