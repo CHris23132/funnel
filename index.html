@@ -659,57 +659,152 @@
                 height: 450px !important;
             }
         }
+
+        .carousel-arrow:hover {
+            background: #f5f5f5;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+        .carousel-slide {
+            transition: opacity 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-container {
+                margin: 1rem;
+            }
+            
+            .carousel-arrow {
+                width: 30px;
+                height: 30px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- 1. Hero Section (header) -->
     <div class="header">
         <div class="hero-title-container">
-            <h1 class="hero-title">You can do it too, Download the Free E-Book and get started</h1>
+            <h1 class="hero-title">The Secret to How to Start Getting Paid to Work With Software</h1>
         </div>
-        <p class="hero-subtitle" style="font-weight: 600; margin-bottom: 1.5rem;">Transform Your Future with Software Development</p>
         
-        <div class="hero-video">
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@christopher.walsh.apps/video/7469860283628916023" data-video-id="7469860283628916023">
-                <section>
-                    <a target="_blank" title="@christopher.walsh.apps" href="https://www.tiktok.com/@christopher.walsh.apps?refer=embed">@christopher.walsh.apps</a> Make apps and websites Using Code, without knowing how to Code 
-                    <a title="software" target="_blank" href="https://www.tiktok.com/tag/software?refer=embed">#software</a> 
-                    <a title="makemoneyonline" target="_blank" href="https://www.tiktok.com/tag/makemoneyonline?refer=embed">#makemoneyonline</a> 
-                    <a title="remotework" target="_blank" href="https://www.tiktok.com/tag/remotework?refer=embed">#remotework</a> 
-                    <a title="education" target="_blank" href="https://www.tiktok.com/tag/education?refer=embed">#education</a> 
-                </section>
-            </blockquote>
-        </div>
+        <!-- New Image Carousel -->
+        <div class="carousel-container" style="
+            max-width: 600px;
+            margin: 2rem auto;
+            position: relative;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: white;
+            padding: 20px;
+        ">
+            <div class="carousel-slides" style="position: relative;">
+                <div class="carousel-slide" data-index="0">
+                    <img src="images/1.png" alt="Book Preview Page 1" style="width: 100%; border-radius: 8px;">
+                </div>
+                <div class="carousel-slide" data-index="1" style="display: none;">
+                    <img src="images/2.png" alt="Book Preview Page 2" style="width: 100%; border-radius: 8px;">
+                </div>
+                <div class="carousel-slide" data-index="2" style="display: none;">
+                    <img src="images/3.png" alt="Book Preview Page 3" style="width: 100%; border-radius: 8px;">
+                </div>
+                <div class="carousel-slide" data-index="3" style="display: none;">
+                    <img src="images/4.png" alt="Book Preview Page 4" style="width: 100%; border-radius: 8px;">
+                    <div class="cta-overlay" style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0, 0, 0, 0.7);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 8px;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    ">
+                        <h3 style="color: white; font-size: 1.8rem; margin-bottom: 1rem; text-align: center;">
+                            Ready to Start Your Journey?
+                        </h3>
+                        <a href="https://buy.stripe.com/7sI9BS9sWfIf38kaEK" 
+                           class="download-button" 
+                           style="
+                               display: inline-block;
+                               background: var(--primary-color);
+                               color: white;
+                               padding: 1rem 2rem;
+                               font-size: 1.2rem;
+                               font-weight: 600;
+                               border-radius: 8px;
+                               text-decoration: none;
+                               transition: all 0.3s ease;
+                               box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+                           ">
+                            Download E-Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <button class="carousel-arrow prev" style="
+                position: absolute;
+                left: -20px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: white;
+                border: none;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                cursor: pointer;
+                display: none;
+            ">←</button>
+            
+            <button class="carousel-arrow next" style="
+                position: absolute;
+                right: -20px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: white;
+                border: none;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                cursor: pointer;
+            ">→</button>
 
-        <a href="https://buy.stripe.com/7sI9BS9sWfIf38kaEK" 
-           class="download-button" 
-           style="display: inline-block; 
-                  background: var(--primary-color); 
-                  color: white; 
-                  padding: 1.2rem 3rem; 
-                  font-size: 1.3rem; 
-                  font-weight: 700; 
-                  border-radius: 12px; 
-                  text-decoration: none; 
-                  transition: all 0.3s ease;
-                  box-shadow: 0 4px 6px rgba(239, 68, 68, 0.2);
-                  margin: 2rem 0 1rem;">
-            Download Free E-Book
-        </a>
-
-        <div class="next-class-info" style="
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            margin-top: 1rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);">
-            <h2 style="color: white; font-size: 1.2rem; margin-bottom: 0.5rem;">
-                Next Class: iOS App Development
-            </h2>
-            <p style="color: rgba(255, 255, 255, 0.9); font-size: 1rem;">
-                Sunday, February 16, 2025
-            </p>
+            <!-- Progress Dots -->
+            <div class="carousel-dots" style="
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                margin-top: 1rem;
+            ">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+            </div>
         </div>
     </div>
     
@@ -954,6 +1049,55 @@
                     });
                 });
             }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.carousel-arrow.prev');
+            const nextBtn = document.querySelector('.carousel-arrow.next');
+            const ctaOverlay = document.querySelector('.cta-overlay');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.style.display = 'none');
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                slides[index].style.display = 'block';
+                dots[index].classList.add('active');
+                
+                prevBtn.style.display = index === 0 ? 'none' : 'block';
+                
+                if (index === 3) {
+                    ctaOverlay.style.opacity = '1';
+                    nextBtn.style.display = 'none';
+                } else {
+                    if (ctaOverlay) ctaOverlay.style.opacity = '0';
+                    nextBtn.style.display = 'block';
+                }
+            }
+
+            nextBtn.addEventListener('click', () => {
+                currentSlide = Math.min(currentSlide + 1, slides.length - 1);
+                showSlide(currentSlide);
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentSlide = Math.max(currentSlide - 1, 0);
+                showSlide(currentSlide);
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                });
+            });
+
+            // Initialize
+            showSlide(0);
         });
     </script>
 </body>
