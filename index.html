@@ -642,6 +642,19 @@
             footer {
                 padding: 1.5rem 1rem !important;
             }
+
+            .class-offerings-section > div:first-of-type {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 1rem;
+            }
+
+            .class-offerings-section > div:first-of-type > div {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto 2rem !important;
+            }
         }
 
         /* Small Mobile Devices */
@@ -815,28 +828,80 @@
         </h2>
         
         <div style="text-align: center; margin-bottom: 3rem;">
-            <div style="display: inline-block; background: rgba(255, 68, 68, 0.1); padding: 1rem 2rem; border-radius: 12px; margin: 0 1rem;">
+            <div style="
+                display: inline-block; 
+                background: rgba(255, 68, 68, 0.1); 
+                padding: 1.5rem 2rem; 
+                border-radius: 12px; 
+                margin: 0 1rem;
+                /* Add mobile styles */
+                @media (max-width: 768px) {
+                    display: block;
+                    margin: 0 auto 2rem;
+                    max-width: 300px;
+                }
+            ">
                 <p style="color: white; font-size: 1.3rem; margin-bottom: 0.5rem;">
                     Build Website Class
                 </p>
                 <p style="color: rgba(255, 255, 255, 0.7); text-decoration: line-through; font-size: 1.1rem;">
                     Regular: $60
                 </p>
-                <p style="color: #FF4444; font-size: 1.6rem; font-weight: 700;">
+                <p style="color: #FF4444; font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem;">
                     February Special: $40
                 </p>
+                <a href="" 
+                   onclick="Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/talk-to-computer-make-apps-class?primary_color=ff0000'});return false;"
+                   style="
+                       color: var(--primary-color);
+                       text-decoration: underline;
+                       font-size: 1.1rem;
+                       font-weight: 600;
+                       cursor: pointer;
+                       transition: opacity 0.3s ease;
+                   "
+                   onmouseover="this.style.opacity='0.8'"
+                   onmouseout="this.style.opacity='1'">
+                    Book Now
+                </a>
             </div>
             
-            <div style="display: inline-block; background: rgba(255, 68, 68, 0.1); padding: 1rem 2rem; border-radius: 12px; margin: 0 1rem;">
+            <div style="
+                display: inline-block; 
+                background: rgba(255, 68, 68, 0.1); 
+                padding: 1.5rem 2rem; 
+                border-radius: 12px; 
+                margin: 0 1rem;
+                /* Add mobile styles */
+                @media (max-width: 768px) {
+                    display: block;
+                    margin: 0 auto;
+                    max-width: 300px;
+                }
+            ">
                 <p style="color: white; font-size: 1.3rem; margin-bottom: 0.5rem;">
                     Build iOS App Class
                 </p>
                 <p style="color: rgba(255, 255, 255, 0.7); text-decoration: line-through; font-size: 1.1rem;">
                     Regular: $80
                 </p>
-                <p style="color: #FF4444; font-size: 1.6rem; font-weight: 700;">
+                <p style="color: #FF4444; font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem;">
                     February Special: $60
                 </p>
+                <a href="" 
+                   onclick="Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/build-first-ios-app?primary_color=ff0000'});return false;"
+                   style="
+                       color: var(--primary-color);
+                       text-decoration: underline;
+                       font-size: 1.1rem;
+                       font-weight: 600;
+                       cursor: pointer;
+                       transition: opacity 0.3s ease;
+                   "
+                   onmouseover="this.style.opacity='0.8'"
+                   onmouseout="this.style.opacity='1'">
+                    Book Now
+                </a>
             </div>
         </div>
         
@@ -884,7 +949,7 @@
                 </div>
             </div>
             <div style="flex: 1;">
-                <div class="calendly-inline-widget" data-url="https://calendly.com/chris-christopher-walsh-apps/build-first-ios-app?primary_color=ff0c0c" style="min-width:320px;height:600px;"></div>
+                <div class="calendly-inline-widget" data-url="https://calendly.com/chris-christopher-walsh-apps/build-first-ios-app?primary_color=ff0000" style="min-width:320px;height:600px;"></div>
             </div>
         </div>
     </section>
@@ -955,7 +1020,7 @@
             Join the Community for Exclusive Content and Support
         </h2>
     </div>
-
+    
     <div class="content-container">
         <div class="video-container">
             <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@christopher.walsh.apps/video/7470289804802985271" data-video-id="7470289804802985271">
@@ -1101,4 +1166,4 @@
         });
     </script>
 </body>
-</html>
+</html> 
