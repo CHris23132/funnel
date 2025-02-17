@@ -818,6 +818,103 @@
             </p>
         </div>
         
+        <!-- Add TikTok VSL -->
+        <div style="
+            max-width: 350px;
+            height: 620px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            @media (max-width: 768px) {
+                height: 580px;
+                margin: 1.5rem auto;
+            }
+        ">
+            <blockquote 
+                class="tiktok-embed" 
+                cite="https://www.tiktok.com/@christopher.walsh.apps/video/7469860283628916023" 
+                data-video-id="7469860283628916023" 
+                style="max-width: 325px; min-width: 325px; border-radius: 12px; overflow: hidden;"
+            >
+                <section>
+                    <a target="_blank" title="@christopher.walsh.apps" href="https://www.tiktok.com/@christopher.walsh.apps?refer=embed">@christopher.walsh.apps</a>
+                </section>
+            </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
+        </div>
+
+        <!-- Add Download Button -->
+        <div style="
+            text-align: center;
+            margin: 0 auto 2rem;
+            max-width: 350px;
+        ">
+            <a href="https://buy.stripe.com/7sI9BS9sWfIf38kaEK" 
+               onclick="trackDownload()"
+               style="
+                   display: inline-block;
+                   background: var(--primary-color);
+                   color: white;
+                   padding: 1rem 2rem;
+                   font-size: 1.2rem;
+                   font-weight: 600;
+                   border-radius: 12px;
+                   text-decoration: none;
+                   transition: all 0.3s ease;
+                   box-shadow: 0 10px 30px rgba(255, 68, 68, 0.3);
+                   width: 100%;
+                   @media (max-width: 768px) {
+                       font-size: 1.1rem;
+                       padding: 0.8rem 1.5rem;
+                   }
+               "
+               onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 15px 30px rgba(255, 68, 68, 0.4)'"
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(255, 68, 68, 0.3)'"
+            >
+                Download E-Book Now
+            </a>
+        </div>
+
+        <!-- Add compelling headline before book preview -->
+        <div style="
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 800px;
+            padding: 0 1rem;
+        ">
+            <h2 style="
+                color: white;
+                font-size: 2.4rem;
+                font-weight: 800;
+                line-height: 1.3;
+                margin-bottom: 1rem;
+                background: linear-gradient(45deg, #FF4444, #FF8888);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-transform: uppercase;
+                @media (max-width: 768px) {
+                    font-size: 1.8rem;
+                }
+            ">
+                LEAKED: THE "RAPID APP BLUEPRINT" MAKING TRADITIONAL CODERS FURIOUS
+            </h2>
+            <p style="
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 1.3rem;
+                line-height: 1.6;
+                font-weight: 500;
+                margin-bottom: 2rem;
+                @media (max-width: 768px) {
+                    font-size: 1.1rem;
+                }
+            ">
+                Young developers are using this controversial method to build and launch profitable apps in weeks instead of months - while "experienced" programmers are stuck maintaining legacy code for years
+            </p>
+        </div>
+
         <!-- New Image Carousel -->
         <div class="carousel-container" style="
             max-width: 600px;
@@ -1052,315 +1149,178 @@
         </div>
 
         <div style="
-            max-width: 500px;
+            max-width: 1200px;
             margin: 3rem auto 1rem;
             @media (max-width: 768px) {
-                margin: 2rem auto 1rem;
+                margin: 2rem 1rem;
             }
         ">
-            <img src="images/app-social-proof.png" 
-                 alt="App Portfolio Showcase" 
-                 style="
-                     width: 100%;
-                     border-radius: 16px;
-                     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-                     margin-bottom: 1.5rem;
-                 "
-            >
-            
-            <!-- Store Logos Container -->
+            <!-- Main App Store Stats Image - Centered and Smaller -->
             <div style="
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 1.5rem;
+                justify-content: center;
+                margin-bottom: 3rem;
             ">
-                <div style="
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 2rem;
-                    margin: 0 auto;
-                    background: white;
-                    padding: 1rem 2rem;
-                    border-radius: 12px;
-                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-                    max-width: 300px;
-                    @media (max-width: 768px) {
-                        padding: 0.8rem 1.5rem;
-                        gap: 1.5rem;
-                    }
-                ">
-                    <img src="images/store.png" 
-                         alt="App Store" 
-                         style="height: 40px; @media (max-width: 768px) { height: 30px; }"
-                    >
-                    <img src="images/1_R4c8lHBHuH5qyqOtZb3h-w (1).png" 
-                         alt="Mac App Store" 
-                         style="height: 40px; @media (max-width: 768px) { height: 30px; }"
-                    >
-                </div>
-                
-                <!-- New Subtle Download Button -->
-                <a href="https://buy.stripe.com/7sI9BS9sWfIf38kaEK" 
-                   onclick="trackDownload()"
-                   style="
-                       color: var(--primary-color);
-                       font-size: 1rem;
-                       text-decoration: none;
-                       padding: 0.8rem 1.5rem;
-                       border: 1px solid var(--primary-color);
-                       border-radius: 8px;
-                       transition: all 0.3s ease;
-                       background: rgba(255, 68, 68, 0.1);
-                       @media (max-width: 768px) {
-                           font-size: 0.9rem;
-                           padding: 0.6rem 1.2rem;
-                       }
-                   "
-                   onmouseover="this.style.background='rgba(255, 68, 68, 0.2)'"
-                   onmouseout="this.style.background='rgba(255, 68, 68, 0.1)'"
+                <img src="images/IMG_9521.jpg" 
+                     alt="App Store Statistics" 
+                     style="
+                         width: 100%;
+                         max-width: 400px;
+                         border-radius: 16px;
+                         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+                         @media (max-width: 768px) {
+                             max-width: 300px;
+                         }
+                     "
                 >
-                    Download Free E-Book
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    <!-- 2. Class Offerings Section -->
-    <section class="class-offerings-section" style="padding: 4rem 2rem; margin: 2rem 0 0;">
-        <h2 style="text-align: center; font-size: 2.8rem; color: white; margin-bottom: 3rem; text-shadow: 0 0 20px rgba(255, 68, 68, 0.3);">
-            Money Back Guarantee, You Will Build First App or Website
-        </h2>
-        
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <div style="
-                display: inline-block; 
-                background: rgba(255, 68, 68, 0.1); 
-                padding: 1.5rem 2rem; 
-                border-radius: 12px; 
-                margin: 0 1rem;
-                /* Add mobile styles */
-                @media (max-width: 768px) {
-                    display: block;
-                    margin: 0 auto 2rem;
-                    max-width: 300px;
-                }
-            ">
-                <p style="color: white; font-size: 1.3rem; margin-bottom: 0.5rem;">
-                    Build Website Class
-                </p>
-                <p style="color: rgba(255, 255, 255, 0.7); text-decoration: line-through; font-size: 1.1rem;">
-                    Regular: $60
-                </p>
-                <p style="color: #FF4444; font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem;">
-                    February Special: $40
-                </p>
-                <a href="" 
-                   onclick="trackWebClass(); Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/talk-to-computer-make-apps-class?primary_color=ff0000'}); return false;"
-                   style="color: var(--primary-color);">
-                    Book Now
-                </a>
             </div>
             
+            <!-- Three Apps Row - Larger and Full Width -->
             <div style="
-                display: inline-block; 
-                background: rgba(255, 68, 68, 0.1); 
-                padding: 1.5rem 2rem; 
-                border-radius: 12px; 
-                margin: 0 1rem;
-                /* Add mobile styles */
+                display: flex;
+                justify-content: space-between;
+                gap: 2rem;
+                margin-bottom: 2rem;
                 @media (max-width: 768px) {
-                    display: block;
-                    margin: 0 auto;
-                    max-width: 300px;
+                    flex-direction: column;
+                    gap: 2rem;
                 }
             ">
-                <p style="color: white; font-size: 1.3rem; margin-bottom: 0.5rem;">
-                    Build iOS App Class
-                </p>
-                <p style="color: rgba(255, 255, 255, 0.7); text-decoration: line-through; font-size: 1.1rem;">
-                    Regular: $80
-                </p>
-                <p style="color: #FF4444; font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem;">
-                    February Special: $60
-                </p>
-                <a href="" 
-                   onclick="trackIOSClass(); Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/build-first-ios-app?primary_color=ff0000'}); return false;"
-                   style="color: var(--primary-color);">
-                    Book Now
-                </a>
+                <img src="images/margaretimage.png" 
+                     alt="Margaret App" 
+                     style="
+                         width: 33%;
+                         border-radius: 16px;
+                         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                         @media (max-width: 768px) {
+                             width: 100%;
+                             max-width: none;
+                         }
+                     "
+                >
+                <img src="images/arimage.png" 
+                     alt="AR App" 
+                     style="
+                         width: 33%;
+                         border-radius: 16px;
+                         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                         @media (max-width: 768px) {
+                             width: 100%;
+                             max-width: none;
+                         }
+                     "
+                >
+                <img src="images/macosimage.png" 
+                     alt="MacOS App" 
+                     style="
+                         width: 33%;
+                         border-radius: 16px;
+                         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                         @media (max-width: 768px) {
+                             width: 100%;
+                             max-width: none;
+                         }
+                     "
+                >
             </div>
         </div>
-        
-        <!-- Web Class Section -->
-        <div style="display: flex; gap: 3rem; max-width: 1400px; margin: 0 auto 4rem; background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
-            <div style="flex: 1; padding: 2rem;">
-                <h3 style="color: white; font-size: 2.2rem; margin-bottom: 1.5rem; background: linear-gradient(45deg, #FF4444, #FF8888); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                    Transform Your Future: Build Your First Web App
-                </h3>
-                <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.6;">
-                    Join our exclusive group class sessions where you'll learn to build professional apps through natural conversation. Whether you're a complete beginner or looking to enhance your skills, our proven method turns complex coding concepts into simple, engaging discussions.
-                </p>
-                
-                <div style="background: rgba(255, 68, 68, 0.1); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
-                    <p style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">✓ Learn at your own pace with personalized guidance</p>
-                    <p style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">✓ Build real, publishable apps during the training</p>
-                    <p style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">✓ Master modern tools like ChatGPT and Gemini API</p>
-                    <p style="color: white; font-size: 1.1rem;">✓ Get direct feedback and support</p>
-                </div>
-            </div>
-            <div style="flex: 1;">
-                <div class="calendly-inline-widget" data-url="https://calendly.com/chris-christopher-walsh-apps/talk-to-computer-make-apps-class?text_color=000000&primary_color=ff0000" style="min-width:320px;height:600px;"></div>
-            </div>
-        </div>
-
-        <!-- iOS Class Section -->
-        <div style="display: flex; gap: 3rem; max-width: 1400px; margin: 0 auto; background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
-            <div style="flex: 1; padding: 2rem;">
-                <h3 style="color: white; font-size: 2.2rem; margin-bottom: 1.5rem; background: linear-gradient(45deg, #FF4444, #FF8888); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                    Transform Your Future: Build Your First iOS App
-                </h3>
-                <h4 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1rem;">Master iOS Development</h4>
-                <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.6;">
-                    Join our exclusive iOS app development course and learn to build real, publishable apps using Xcode—from scratch! Whether you're a complete beginner or looking to level up your skills, our hands-on approach makes complex coding simple, engaging, and actionable.
-                </p>
-                
-                <div style="background: rgba(255, 68, 68, 0.1); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
-                    <p style="color: white; font-size: 1.1rem; margin-bottom: 1rem;">💻 Mac Required | Small Group Classes | Limited Spots Available</p>
-                    <ul style="color: white; list-style-type: none; font-size: 1.1rem;">
-                        <li style="margin-bottom: 0.8rem;">• Build Your First iOS App – Design a user-friendly interface & connect it to a backend</li>
-                        <li style="margin-bottom: 0.8rem;">• Create a Social Media App – Implement image posting & real-world functionality</li>
-                        <li style="margin-bottom: 0.8rem;">• Gain Real-World Skills – Develop projects for your portfolio</li>
-                    </ul>
-                    <p style="color: var(--primary-color); margin-top: 1rem; font-weight: 600;">🚀 Take the first step toward your app development career today!</p>
-                </div>
-            </div>
-            <div style="flex: 1;">
-                <div class="calendly-inline-widget" data-url="https://calendly.com/chris-christopher-walsh-apps/build-first-ios-app?primary_color=ff0000" style="min-width:320px;height:600px;"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. Bonus App Store Section -->
-    <div class="bonus-section" style="
-        max-width: 1000px;
-        margin: 2rem auto 2rem;
-        text-align: center;
-        background: linear-gradient(135deg, rgba(255, 68, 68, 0.1), rgba(255, 136, 136, 0.1));
-        padding: 3rem;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+    </div>
+    
+    <!-- About Section - Moved here -->
+    <section style="
+        background: rgba(255, 255, 255, 0.02);
+        padding: 4rem 2rem;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 2rem 0;
     ">
-        <h3 style="
-            color: white;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, #FF4444, #FF8888);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        ">
-            Bonus: Get the Pro Version
-        </h3>
-        <p style="
-            color: white;
-            font-size: 1.4rem;
-            margin-bottom: 2rem;
-            font-weight: 600;
-            line-height: 1.4;
-        ">
-            Every Student gets Pro Version of the Make Apps Class MacOS App store class companion app
-        </p>
         <div style="
-            display: flex;
-            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
             align-items: center;
-            gap: 3rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
+            @media (max-width: 968px) {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         ">
-            <img src="images/Make-Apps-Logo.png" 
-                 alt="Make Apps Logo" 
-                 style="height: 80px; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2)); transition: transform 0.3s ease;"
-                 onmouseover="this.style.transform='scale(1.1)'"
-                 onmouseout="this.style.transform='scale(1)'">
-            <img src="images/appstore-logo.png" 
-                 alt="App Store Logo" 
-                 style="height: 80px; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2)); transition: transform 0.3s ease;"
-                 onmouseover="this.style.transform='scale(1.1)'"
-                 onmouseout="this.style.transform='scale(1)'">
-        </div>
-    </div>
-
-    <!-- 4. Content Container (video and Patreon) -->
-    <div class="community-header" style="text-align: center; margin: 4rem auto 2rem;">
-        <h2 style="
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            background: linear-gradient(45deg, #FF4444, #FF8888);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-            text-shadow: 0 0 20px rgba(255, 68, 68, 0.1);
-        ">
-            Join the Community for Exclusive Content and Support
-        </h2>
-    </div>
-    
-    <div class="content-container">
-        <div class="video-container">
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@christopher.walsh.apps/video/7470289804802985271" data-video-id="7470289804802985271">
-                <section>
-                    <a target="_blank" title="@christopher.walsh.apps" href="https://www.tiktok.com/@christopher.walsh.apps?refer=embed">@christopher.walsh.apps</a> 90% of courses are a scam, so that's why I wrote a book and run a class.  We do live app building together so we make sure the customer actually gets the skills they wanted from the course or "self guided" learning. For a workshop live online every Monday and Wednesday 6pm (EST)Hosted every Monday & Wednesday build first website and every Saturday and Sunday for build first iOS app. 
-                    <a title="software" target="_blank" href="https://www.tiktok.com/tag/software?refer=embed">#software</a> 
-                    <a title="remotework" target="_blank" href="https://www.tiktok.com/tag/remotework?refer=embed">#remotework</a> 
-                    <a title="makemoneyonline" target="_blank" href="https://www.tiktok.com/tag/makemoneyonline?refer=embed">#makemoneyonline</a> 
-                    <a title="education" target="_blank" href="https://www.tiktok.com/tag/education?refer=embed">#education</a> 
-                </section>
-            </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
-        </div>
-        <div class="stripe-container">
-            <div class="offer-content">
-                <div class="offer-details">
-                    <div class="price">Join Our Community</div>
-                    <div class="original-price" style="margin-bottom: 0.5rem;">Starting at $5/month</div>
-                </div>
-                <div class="features" style="margin: 0.5rem 0;">
-                    <div class="feature-item" style="margin-bottom: 0.5rem;">Access Recorded Course Material</div>
-                    <div class="feature-item" style="margin-bottom: 0.5rem;">Downloadable Project Files & Code</div>
-                    <div class="feature-item" style="margin-bottom: 0.5rem;">E-Books & Class Assets</div>
-                    <div class="feature-item" style="margin-bottom: 0.5rem;">Discord Community Support</div>
-                    <div class="feature-item" style="margin-bottom: 0.5rem;">Monthly Ask Me Anything Sessions</div>
-                    <div class="feature-item" style="margin-bottom: 0.5rem;">Higher Tiers: Group Classes & 1-on-1 Training</div>
-                </div>
-                <div class="class-preview-image">
-                    <img src="images/class-pic.png" alt="Class Preview" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; margin: 0.5rem 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                </div>
-                <a href="https://patreon.com/ChristopherWalshApps" 
-                   onclick="trackPatreon()"
-                   style="display: block; margin: 0.5rem 0; text-decoration: none; padding: 1.2rem; font-size: 1.2rem; background: var(--primary-color); color: white; border-radius: 12px; text-align: center;">
-                    Join on Patreon
-                </a>
-                <div class="guarantee" style="margin: 0.5rem 0; font-size: 0.8rem;">Join our growing community of developers!</div>
+            <div style="
+                position: relative;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+                transform: perspective(1000px) rotateY(-5deg);
+                transition: transform 0.3s ease;
+                @media (max-width: 968px) {
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+            ">
+                <img src="images/headshot-despill-2.png" 
+                     alt="Christopher Walsh" 
+                     style="width: 100%; display: block; border-radius: 20px;"
+                >
             </div>
-        </div>
-    </div>
-    
-    <!-- 5. About Section -->
-    <section class="about-section">
-        <div class="about-container">
-            <div class="about-image-container">
-                <img src="images/headshot-despill-2.png" alt="Christopher Walsh" class="about-image">
-            </div>
-            <div class="about-content">
-                <h2 class="about-title">About Christopher</h2>
-                <p class="about-text">Self-taught web entrepreneur and developer. Christopher has been a self-directed learner dating back to the mastery of music production back in his early career as an 18-year-old operating Pro Tools at a music studio in Toronto. From there, he was hired by an animation studio to create animations and 3D scenes for an animated show in Blender 3D.</p>
-                <p class="about-text">Chris found his true medium in development when he first set out to build an AR application inspired by his love for stop-motion animation. This led him into iOS Xcode development and eventually into <span class="about-highlight">full financial independence from web-based projects and remote work</span>.</p>
-                <p class="about-text">Chris has started a few app startups such as Stop Motion AR and Margaret, both iOS apps currently available on the App Store with paying annual users. Chris created a formula to start with and use a plan and framework to learn how to pick up useful skills such as web development, automation, workflows and app development.</p>
-                <p class="about-text">For Christopher, it all started with learning the core concepts taught in the book and course. Don't believe me? This website was built following the proven method and Christopher guarantees this method - <span class="about-highlight">the same success can be yours today</span>.</p>
+            
+            <div style="color: white;">
+                <h2 style="
+                    font-size: 2.5rem;
+                    font-weight: 800;
+                    margin-bottom: 2rem;
+                    background: linear-gradient(45deg, #FF4444, #FF8888);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    @media (max-width: 968px) {
+                        font-size: 2rem;
+                        text-align: center;
+                    }
+                ">
+                    Meet Your Guide to App Development Success
+                </h2>
+                
+                <p style="
+                    color: rgba(255, 255, 255, 0.9);
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    margin-bottom: 1.5rem;
+                ">
+                    From music studio pro to animation artist, I've always been driven by one thing: mastering new skills fast. But it wasn't until I discovered app development that everything clicked.
+                </p>
+                
+                <p style="
+                    color: rgba(255, 255, 255, 0.9);
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    margin-bottom: 1.5rem;
+                ">
+                    <span style="color: var(--primary-color); font-weight: 600;">Here's the truth:</span> In just 18 months, I went from complete beginner to launching multiple successful apps and achieving total financial freedom through software development.
+                </p>
+                
+                <p style="
+                    color: rgba(255, 255, 255, 0.9);
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    margin-bottom: 1.5rem;
+                ">
+                    The secret? I developed a framework that cuts through the noise and focuses on what actually works. No computer science degree. No years of bootcamps. Just practical, proven methods that get results.
+                </p>
+                
+                <p style="
+                    font-size: 1.2rem;
+                    line-height: 1.8;
+                    padding: 1rem;
+                    border-left: 3px solid var(--primary-color);
+                    background: rgba(255, 68, 68, 0.1);
+                    border-radius: 0 8px 8px 0;
+                    font-weight: 500;
+                ">
+                    "This isn't just theory - I've used this exact method to build and launch profitable apps like Stop Motion AR and Margaret, both generating consistent revenue on the App Store. Now, I'm sharing this blueprint with you."
+                </p>
             </div>
         </div>
     </section>
