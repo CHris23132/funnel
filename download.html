@@ -449,5 +449,16 @@
     <!-- Calendly scripts -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+    <!-- Add this right after the Meta Pixel base code -->
+    <script>
+        // Track successful purchase
+        fbq('track', 'Purchase', {
+            content_name: 'Talk to Computer, Make Apps E-Book',
+            content_category: 'E-Book',
+            value: 1.00,
+            currency: 'USD'
+        });
+    </script>
 </body>
 </html> 

@@ -1120,13 +1120,52 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // TikTok Pixel tracking for Patreon button click
+            // Track download button click
+            const downloadButton = document.querySelector('a[href*="stripe.com"]');
+            if (downloadButton) {
+                downloadButton.addEventListener('click', function() {
+                    fbq('track', 'InitiateCheckout', {
+                        content_name: 'E-Book Download',
+                        content_category: 'E-Book',
+                        value: 1.00,
+                        currency: 'USD'
+                    });
+                });
+            }
+
+            // Track Web Class signup
+            const webClassButton = document.querySelector('a[onclick*="talk-to-computer-make-apps-class"]');
+            if (webClassButton) {
+                webClassButton.addEventListener('click', function() {
+                    fbq('track', 'Schedule', {
+                        content_name: 'Web Development Class',
+                        content_category: 'Class Booking',
+                        value: 40.00,
+                        currency: 'USD'
+                    });
+                });
+            }
+
+            // Track iOS Class signup
+            const iosClassButton = document.querySelector('a[onclick*="build-first-ios-app"]');
+            if (iosClassButton) {
+                iosClassButton.addEventListener('click', function() {
+                    fbq('track', 'Schedule', {
+                        content_name: 'iOS Development Class',
+                        content_category: 'Class Booking',
+                        value: 60.00,
+                        currency: 'USD'
+                    });
+                });
+            }
+
+            // Track Patreon signup
             const patreonButton = document.querySelector('a[href*="patreon.com"]');
             if (patreonButton) {
                 patreonButton.addEventListener('click', function() {
-                    ttq.track('Subscribe', {
-                        content_type: 'membership',
+                    fbq('track', 'Subscribe', {
                         content_name: 'Patreon Membership',
+                        content_category: 'Membership',
                         value: 5.00,
                         currency: 'USD'
                     });
