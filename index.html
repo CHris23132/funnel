@@ -160,6 +160,7 @@
             align-items: center;
             padding: 20px;
             color: var(--text-color);
+            padding-top: 50px; /* Height of the banner */
         }
 
         .header {
@@ -172,13 +173,14 @@
             flex-direction: column;
             justify-content: center;
             gap: 0.5rem;
+            padding-top: 2rem;
         }
 
         .hero-title {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             font-weight: 800;
             margin-bottom: 0.5rem;
-            line-height: 1.2;
+            line-height: 1.3;
             background: linear-gradient(
                 300deg,
                 #FF4444 0%,
@@ -197,6 +199,10 @@
                 0 0 40px rgba(255, 68, 68, 0.1);
             position: relative;
             z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .hero-title::after {
@@ -585,8 +591,9 @@
             }
 
             .hero-title {
-                font-size: 1.8rem;
-                margin-bottom: 1rem;
+                font-size: 1.6rem;
+                padding: 0 1rem;
+                letter-spacing: 0.3px;
             }
 
             .hero-subtitle {
@@ -770,10 +777,28 @@
     </style>
 </head>
 <body>
+    <div style="
+        background: linear-gradient(45deg, #FF4444, #FF8888);
+        color: white;
+        text-align: center;
+        padding: 0.8rem;
+        font-weight: 800;
+        font-size: 1.2rem;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+    ">
+        APP DEVELOPER TELLS ALL!
+    </div>
+
     <!-- 1. Hero Section (header) -->
     <div class="header">
         <div class="hero-title-container">
-            <h1 class="hero-title">The Secret to How to Start Getting Paid to Work With Software</h1>
+            <h1 class="hero-title"> CONTROVERSIAL NEW WAY YOU CAN MAKE MONEY ANYWHERE WITH WIFI THE SECRET TO START GETTING PAID TO WORK WITH SOFTWARE</h1>
         </div>
         
         <!-- New Image Carousel -->
