@@ -975,8 +975,20 @@
         display: flex;
         gap: 3rem;
         align-items: center;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            padding: 1.5rem;
+            margin: 2rem 1rem;
+            gap: 2rem;
+        }
     ">
-        <div style="flex: 1; text-align: left;">
+        <div style="
+            flex: 1; 
+            text-align: left;
+            @media (max-width: 768px) {
+                text-align: center;
+            }
+        ">
             <h3 style="
                 color: white;
                 font-size: 2rem;
@@ -985,6 +997,10 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 font-weight: 800;
+                @media (max-width: 768px) {
+                    font-size: 1.6rem;
+                    margin-bottom: 1rem;
+                }
             ">
                 "They Can't Figure Out How I'm Doing This..."
             </h3>
@@ -1050,15 +1066,24 @@
             flex-direction: column;
             align-items: center;
             gap: 2rem;
+            @media (max-width: 768px) {
+                width: 100%;
+                gap: 1rem;
+            }
         ">
             <img src="images/app-social-proof.png" 
                  alt="App Portfolio Showcase" 
                  style="
                      width: 100%;
+                     max-width: 400px;
                      border-radius: 16px;
                      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
                      transform: perspective(1000px) rotateY(-5deg);
                      transition: transform 0.3s ease;
+                     @media (max-width: 768px) {
+                         transform: none;
+                         max-width: 300px;
+                     }
                  "
                  onmouseover="this.style.transform='perspective(1000px) rotateY(0deg)'"
                  onmouseout="this.style.transform='perspective(1000px) rotateY(-5deg)'"
@@ -1075,12 +1100,20 @@
                 padding: 1rem 2rem;
                 border-radius: 12px;
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                @media (max-width: 768px) {
+                    width: 90%;
+                    padding: 0.8rem 1.5rem;
+                    gap: 1.5rem;
+                }
             ">
                 <img src="images/store.png" 
                      alt="App Store" 
                      style="
                          height: 40px;
                          transition: transform 0.3s ease;
+                         @media (max-width: 768px) {
+                             height: 30px;
+                         }
                      "
                      onmouseover="this.style.transform='scale(1.05)'"
                      onmouseout="this.style.transform='scale(1)'"
@@ -1090,6 +1123,9 @@
                      style="
                          height: 40px;
                          transition: transform 0.3s ease;
+                         @media (max-width: 768px) {
+                             height: 30px;
+                         }
                      "
                      onmouseover="this.style.transform='scale(1.05)'"
                      onmouseout="this.style.transform='scale(1)'"
