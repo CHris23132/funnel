@@ -963,7 +963,7 @@
         </a>
     </div>
     
-    <!-- Add Social Proof Section -->
+    <!-- Update Social Proof Section -->
     <div style="
         max-width: 900px;
         margin: 4rem auto;
@@ -972,43 +972,43 @@
         border-radius: 24px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         border: 1px solid rgba(255, 255, 255, 0.05);
-        display: flex;
-        gap: 3rem;
-        align-items: center;
+        text-align: center;
         @media (max-width: 768px) {
-            flex-direction: column;
             padding: 1.5rem;
             margin: 2rem 1rem;
-            gap: 2rem;
         }
     ">
-        <div style="
-            flex: 1; 
-            text-align: left;
+        <h3 style="
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #FF4444, #FF8888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
             @media (max-width: 768px) {
-                text-align: center;
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
             }
         ">
-            <h3 style="
-                color: white;
-                font-size: 2rem;
+            "They Can't Figure Out How I'm Doing This..."
+        </h3>
+        
+        <div style="
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            @media (max-width: 768px) {
                 margin-bottom: 1.5rem;
-                background: linear-gradient(45deg, #FF4444, #FF8888);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                font-weight: 800;
-                @media (max-width: 768px) {
-                    font-size: 1.6rem;
-                    margin-bottom: 1rem;
-                }
-            ">
-                "They Can't Figure Out How I'm Doing This..."
-            </h3>
+            }
+        ">
             <p style="
                 color: rgba(255, 255, 255, 0.9);
                 font-size: 1.2rem;
                 line-height: 1.8;
                 margin-bottom: 1.5rem;
+                @media (max-width: 768px) {
+                    font-size: 1.1rem;
+                }
             ">
                 In just 4 months, I've launched:
             </p>
@@ -1018,31 +1018,18 @@
                 line-height: 1.8;
                 list-style: none;
                 padding: 0;
+                display: inline-block;
+                text-align: left;
             ">
-                <li style="
-                    margin-bottom: 1rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                ">
+                <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
                     <span style="color: var(--primary-color); font-weight: bold;">✓</span>
                     4 iOS Apps - All Live on the App Store
                 </li>
-                <li style="
-                    margin-bottom: 1rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                ">
+                <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
                     <span style="color: var(--primary-color); font-weight: bold;">✓</span>
                     1 Professional MacOS App
                 </li>
-                <li style="
-                    margin-bottom: 1rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                ">
+                <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
                     <span style="color: var(--primary-color); font-weight: bold;">✓</span>
                     Multiple High-Converting Websites & Web Apps
                 </li>
@@ -1055,38 +1042,30 @@
                 margin-top: 1.5rem;
                 border-left: 3px solid var(--primary-color);
                 padding-left: 1rem;
+                text-align: left;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
             ">
                 "The secret? A proven method that traditional coding bootcamps don't want you to know about..."
             </p>
         </div>
+
         <div style="
-            flex: 1;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
+            max-width: 500px;
+            margin: 3rem auto 1rem;
             @media (max-width: 768px) {
-                width: 100%;
-                gap: 1rem;
+                margin: 2rem auto 1rem;
             }
         ">
             <img src="images/app-social-proof.png" 
                  alt="App Portfolio Showcase" 
                  style="
                      width: 100%;
-                     max-width: 400px;
                      border-radius: 16px;
                      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-                     transform: perspective(1000px) rotateY(-5deg);
-                     transition: transform 0.3s ease;
-                     @media (max-width: 768px) {
-                         transform: none;
-                         max-width: 300px;
-                     }
+                     margin-bottom: 1.5rem;
                  "
-                 onmouseover="this.style.transform='perspective(1000px) rotateY(0deg)'"
-                 onmouseout="this.style.transform='perspective(1000px) rotateY(-5deg)'"
             >
             
             <!-- Store Logos Container -->
@@ -1095,13 +1074,13 @@
                 justify-content: center;
                 align-items: center;
                 gap: 2rem;
-                margin-top: 1rem;
+                margin: 0 auto;
                 background: white;
                 padding: 1rem 2rem;
                 border-radius: 12px;
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                max-width: 300px;
                 @media (max-width: 768px) {
-                    width: 90%;
                     padding: 0.8rem 1.5rem;
                     gap: 1.5rem;
                 }
@@ -1110,25 +1089,19 @@
                      alt="App Store" 
                      style="
                          height: 40px;
-                         transition: transform 0.3s ease;
                          @media (max-width: 768px) {
                              height: 30px;
                          }
                      "
-                     onmouseover="this.style.transform='scale(1.05)'"
-                     onmouseout="this.style.transform='scale(1)'"
                 >
                 <img src="images/1_R4c8lHBHuH5qyqOtZb3h-w (1).png" 
                      alt="Mac App Store" 
                      style="
                          height: 40px;
-                         transition: transform 0.3s ease;
                          @media (max-width: 768px) {
                              height: 30px;
                          }
                      "
-                     onmouseover="this.style.transform='scale(1.05)'"
-                     onmouseout="this.style.transform='scale(1)'"
                 >
             </div>
         </div>
