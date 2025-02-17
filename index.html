@@ -18,20 +18,62 @@
     
     <!-- Meta Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '616748494659108');
-    fbq('track', 'PageView');
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        
+        // Initialize the pixel
+        fbq('init', '616748494659108');
+        
+        // Track PageView
+        fbq('track', 'PageView');
+
+        // Define tracking functions
+        window.trackDownload = function() {
+            fbq('track', 'InitiateCheckout', {
+                content_name: 'E-Book Download',
+                content_category: 'E-Book',
+                value: 1.00,
+                currency: 'USD'
+            });
+        };
+
+        window.trackWebClass = function() {
+            fbq('track', 'Schedule', {
+                content_name: 'Web Development Class',
+                content_category: 'Class Booking',
+                value: 40.00,
+                currency: 'USD'
+            });
+        };
+
+        window.trackIOSClass = function() {
+            fbq('track', 'Schedule', {
+                content_name: 'iOS Development Class',
+                content_category: 'Class Booking',
+                value: 60.00,
+                currency: 'USD'
+            });
+        };
+
+        window.trackPatreon = function() {
+            fbq('track', 'Subscribe', {
+                content_name: 'Patreon Membership',
+                content_category: 'Membership',
+                value: 5.00,
+                currency: 'USD'
+            });
+        };
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=616748494659108&ev=PageView&noscript=1"
-    /></noscript>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=616748494659108&ev=PageView&noscript=1"/>
+    </noscript>
     <!-- End Meta Pixel Code -->
     
     <!-- Event snippet for Join Web Class conversion -->
@@ -775,6 +817,7 @@
                             Ready to Start Your Journey?
                         </h3>
                         <a href="https://buy.stripe.com/7sI9BS9sWfIf38kaEK" 
+                           onclick="trackDownload()"
                            class="download-button" 
                            style="
                                display: inline-block;
@@ -869,17 +912,8 @@
                     February Special: $40
                 </p>
                 <a href="" 
-                   onclick="Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/talk-to-computer-make-apps-class?primary_color=ff0000'});return false;"
-                   style="
-                       color: var(--primary-color);
-                       text-decoration: underline;
-                       font-size: 1.1rem;
-                       font-weight: 600;
-                       cursor: pointer;
-                       transition: opacity 0.3s ease;
-                   "
-                   onmouseover="this.style.opacity='0.8'"
-                   onmouseout="this.style.opacity='1'">
+                   onclick="trackWebClass(); Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/talk-to-computer-make-apps-class?primary_color=ff0000'}); return false;"
+                   style="color: var(--primary-color);">
                     Book Now
                 </a>
             </div>
@@ -907,17 +941,8 @@
                     February Special: $60
                 </p>
                 <a href="" 
-                   onclick="Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/build-first-ios-app?primary_color=ff0000'});return false;"
-                   style="
-                       color: var(--primary-color);
-                       text-decoration: underline;
-                       font-size: 1.1rem;
-                       font-weight: 600;
-                       cursor: pointer;
-                       transition: opacity 0.3s ease;
-                   "
-                   onmouseover="this.style.opacity='0.8'"
-                   onmouseout="this.style.opacity='1'">
+                   onclick="trackIOSClass(); Calendly.initPopupWidget({url: 'https://calendly.com/chris-christopher-walsh-apps/build-first-ios-app?primary_color=ff0000'}); return false;"
+                   style="color: var(--primary-color);">
                     Book Now
                 </a>
             </div>
@@ -1070,6 +1095,7 @@
                     <img src="images/class-pic.png" alt="Class Preview" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; margin: 0.5rem 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                 </div>
                 <a href="https://patreon.com/ChristopherWalshApps" 
+                   onclick="trackPatreon()"
                    style="display: block; margin: 0.5rem 0; text-decoration: none; padding: 1.2rem; font-size: 1.2rem; background: var(--primary-color); color: white; border-radius: 12px; text-align: center;">
                     Join on Patreon
                 </a>
@@ -1124,12 +1150,7 @@
             const downloadButton = document.querySelector('a[href*="stripe.com"]');
             if (downloadButton) {
                 downloadButton.addEventListener('click', function() {
-                    fbq('track', 'InitiateCheckout', {
-                        content_name: 'E-Book Download',
-                        content_category: 'E-Book',
-                        value: 1.00,
-                        currency: 'USD'
-                    });
+                    trackDownload();
                 });
             }
 
@@ -1137,12 +1158,7 @@
             const webClassButton = document.querySelector('a[onclick*="talk-to-computer-make-apps-class"]');
             if (webClassButton) {
                 webClassButton.addEventListener('click', function() {
-                    fbq('track', 'Schedule', {
-                        content_name: 'Web Development Class',
-                        content_category: 'Class Booking',
-                        value: 40.00,
-                        currency: 'USD'
-                    });
+                    trackWebClass();
                 });
             }
 
@@ -1150,12 +1166,7 @@
             const iosClassButton = document.querySelector('a[onclick*="build-first-ios-app"]');
             if (iosClassButton) {
                 iosClassButton.addEventListener('click', function() {
-                    fbq('track', 'Schedule', {
-                        content_name: 'iOS Development Class',
-                        content_category: 'Class Booking',
-                        value: 60.00,
-                        currency: 'USD'
-                    });
+                    trackIOSClass();
                 });
             }
 
@@ -1163,12 +1174,7 @@
             const patreonButton = document.querySelector('a[href*="patreon.com"]');
             if (patreonButton) {
                 patreonButton.addEventListener('click', function() {
-                    fbq('track', 'Subscribe', {
-                        content_name: 'Patreon Membership',
-                        content_category: 'Membership',
-                        value: 5.00,
-                        currency: 'USD'
-                    });
+                    trackPatreon();
                 });
             }
         });
