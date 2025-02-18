@@ -1409,10 +1409,14 @@
     <!-- Grand Offer Section -->
     <section style="
         background: linear-gradient(135deg, rgba(255, 68, 68, 0.15), rgba(255, 136, 136, 0.15));
-        padding: 4rem 2rem;
+        padding: 4rem 1rem;
         margin: 4rem 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        @media (max-width: 768px) {
+            padding: 2rem 1rem;
+            margin: 2rem 0;
+        }
     ">
         <div style="
             max-width: 1200px;
@@ -1420,13 +1424,18 @@
             display: grid;
             grid-template-columns: 1.2fr 1fr;
             gap: 4rem;
-            align-items: center;
+            align-items: start;
             @media (max-width: 968px) {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
         ">
-            <div style="color: white;">
+            <div style="
+                color: white;
+                @media (max-width: 768px) {
+                    order: 2;
+                }
+            ">
                 <h2 style="
                     font-size: 2.8rem;
                     font-weight: 800;
@@ -1435,13 +1444,19 @@
                     background: linear-gradient(45deg, #FF4444, #FF8888);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-                    @media (max-width: 968px) {
-                        font-size: 2.2rem;
+                    @media (max-width: 768px) {
+                        font-size: 2rem;
                         text-align: center;
+                        margin-bottom: 1rem;
                     }
                 ">
                     Special Limited Time Offer:<br>
-                    <span style="font-size: 3.2rem;">$279 Value FREE</span>
+                    <span style="
+                        font-size: 3.2rem;
+                        @media (max-width: 768px) {
+                            font-size: 2.4rem;
+                        }
+                    ">$279 Value FREE</span>
                 </h2>
 
                 <div style="
@@ -1450,6 +1465,10 @@
                     border-radius: 16px;
                     margin: 2rem 0;
                     border: 1px solid rgba(255, 255, 255, 0.1);
+                    @media (max-width: 768px) {
+                        padding: 1.5rem;
+                        margin: 1rem 0;
+                    }
                 ">
                     <div style="
                         display: flex;
@@ -1506,6 +1525,11 @@
                     line-height: 1.6;
                     margin-bottom: 2rem;
                     font-style: italic;
+                    @media (max-width: 768px) {
+                        font-size: 1.1rem;
+                        margin-bottom: 1.5rem;
+                        text-align: center;
+                    }
                 ">
                     After claiming your offer, you'll receive an email with your book download, App Store code for the Make Apps application, and your exclusive invite to our monthly group consulting calls.
                 </p>
@@ -1516,7 +1540,7 @@
                        display: inline-block;
                        background: var(--primary-color);
                        color: white;
-                       padding: 1.5rem 4rem;
+                       padding: 1.5rem 2rem;
                        font-size: 1.6rem;
                        font-weight: 800;
                        border-radius: 12px;
@@ -1536,10 +1560,9 @@
             </div>
 
             <div style="
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 2rem;
+                @media (max-width: 768px) {
+                    order: 1;
+                }
             ">
                 <img src="images/BookCover1.jpg" 
                      alt="App Development Blueprint Book Cover" 
@@ -1550,37 +1573,15 @@
                          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
                          transform: perspective(1000px) rotateY(-5deg);
                          transition: transform 0.3s ease;
-                         @media (max-width: 968px) {
-                             max-width: 300px;
+                         margin: 0 auto;
+                         display: block;
+                         @media (max-width: 768px) {
+                             max-width: 280px;
+                             transform: none;
                          }
                      "
                      onmouseover="this.style.transform='perspective(1000px) rotateY(0deg)'"
                      onmouseout="this.style.transform='perspective(1000px) rotateY(-5deg)'">
-
-                <a href="https://buy.stripe.com/7sI9BS9sWfIf38kaEK" 
-                   onclick="trackDownload()"
-                   style="
-                       display: inline-block;
-                       background: var(--primary-color);
-                       color: white;
-                       padding: 1.2rem 3rem;
-                       font-size: 1.4rem;
-                       font-weight: 700;
-                       border-radius: 12px;
-                       text-decoration: none;
-                       transition: all 0.3s ease;
-                       box-shadow: 0 10px 30px rgba(255, 68, 68, 0.3);
-                       text-transform: uppercase;
-                       letter-spacing: 1px;
-                       width: 100%;
-                       text-align: center;
-                       max-width: 400px;
-                   "
-                   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 15px 30px rgba(255, 68, 68, 0.4)'"
-                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(255, 68, 68, 0.3)'"
-                >
-                    Claim Offer
-                </a>
             </div>
         </div>
     </section>
@@ -1601,18 +1602,17 @@
             padding: 3rem;
             margin-bottom: 3rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            @media (max-width: 968px) {
-                grid-template-columns: 1fr;
+            @media (max-width: 768px) {
                 padding: 1.5rem;
-                gap: 2rem;
                 margin-bottom: 2rem;
             }
         ">
-            <div>
+            <div style="
+                margin-bottom: 2rem;
+                @media (max-width: 768px) {
+                    margin-bottom: 1.5rem;
+                }
+            ">
                 <h3 style="
                     color: var(--primary-color);
                     font-size: 2rem;
@@ -1627,10 +1627,8 @@
                     color: rgba(255, 255, 255, 0.9);
                     font-size: 1.2rem;
                     line-height: 1.8;
-                    margin-bottom: 1.5rem;
                     @media (max-width: 768px) {
                         font-size: 1.1rem;
-                        text-align: left;
                     }
                 ">
                     The Make Apps MacOS application isn't just software – it's your personal development assistant. It helps you remember and implement every step from the book, organize your prompts, and even includes a full design suite for creating professional mockups. With the integrated draw page, you can bring your app ideas to life before writing a single line of code.
@@ -1642,16 +1640,16 @@
                      width: 100%;
                      border-radius: 12px;
                      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-                     transform: perspective(1000px) rotateY(-5deg);
-                     transition: transform 0.3s ease;
+                     @media (min-width: 769px) {
+                         transform: perspective(1000px) rotateY(-5deg);
+                         transition: transform 0.3s ease;
+                     }
                      @media (max-width: 768px) {
-                         max-width: 400px;
-                         margin: 0 auto;
-                         display: block;
+                         transform: none;
                      }
                  "
-                 onmouseover="this.style.transform='perspective(1000px) rotateY(0deg)'"
-                 onmouseout="this.style.transform='perspective(1000px) rotateY(-5deg)'">
+                 onmouseover="if(window.innerWidth > 768) this.style.transform='perspective(1000px) rotateY(0deg)'"
+                 onmouseout="if(window.innerWidth > 768) this.style.transform='perspective(1000px) rotateY(-5deg)'">
         </div>
 
         <!-- PS 2: Community Access -->
@@ -1661,45 +1659,15 @@
             padding: 3rem;
             margin-bottom: 3rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            @media (max-width: 968px) {
-                grid-template-columns: 1fr;
+            @media (max-width: 768px) {
                 padding: 1.5rem;
-                gap: 2rem;
                 margin-bottom: 2rem;
             }
         ">
             <div style="
-                background: white;
-                padding: 2rem;
-                border-radius: 12px;
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-                transform: perspective(1000px) rotateY(5deg);
-                transition: transform 0.3s ease;
+                margin-bottom: 2rem;
                 @media (max-width: 768px) {
-                    max-width: 400px;
-                    margin: 0 auto;
-                    padding: 1.5rem;
-                    order: 2;
-                }
-            "
-                onmouseover="this.style.transform='perspective(1000px) rotateY(0deg)'"
-                onmouseout="this.style.transform='perspective(1000px) rotateY(5deg)'"
-            >
-                <img src="images/class-pic.png" 
-                     alt="Community Consulting Sessions" 
-                     style="
-                         width: 100%;
-                         border-radius: 8px;
-                         display: block;
-                     ">
-            </div>
-            <div style="
-                @media (max-width: 768px) {
-                    order: 1;
+                    margin-bottom: 1.5rem;
                 }
             ">
                 <h3 style="
@@ -1711,19 +1679,42 @@
                         font-size: 1.6rem;
                         text-align: center;
                     }
-                ">PS: Free Admission to Group Consulting Session</h3>
+                ">PS: Free Ask Me Anything Session</h3>
                 <p style="
                     color: rgba(255, 255, 255, 0.9);
                     font-size: 1.2rem;
                     line-height: 1.8;
-                    margin-bottom: 1.5rem;
                     @media (max-width: 768px) {
                         font-size: 1.1rem;
-                        text-align: left;
                     }
                 ">
                     Get an exclusive invite to a free group consultation session where you can ask me anything. I'll answer all your most frequently asked questions about my journey from knowing no code to working in software in 2025. This is your chance to get direct answers to your burning questions about starting your software development journey.
                 </p>
+            </div>
+            <div style="
+                background: white;
+                padding: 2rem;
+                border-radius: 12px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+                @media (min-width: 769px) {
+                    transform: perspective(1000px) rotateY(5deg);
+                    transition: transform 0.3s ease;
+                }
+                @media (max-width: 768px) {
+                    padding: 1rem;
+                    transform: none;
+                }
+            "
+                onmouseover="if(window.innerWidth > 768) this.style.transform='perspective(1000px) rotateY(0deg)'"
+                onmouseout="if(window.innerWidth > 768) this.style.transform='perspective(1000px) rotateY(5deg)'"
+            >
+                <img src="images/class-pic.png" 
+                     alt="Community Consulting Sessions" 
+                     style="
+                         width: 100%;
+                         border-radius: 8px;
+                         display: block;
+                     ">
             </div>
         </div>
 
@@ -1734,18 +1725,17 @@
             padding: 3rem;
             margin-bottom: 3rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            @media (max-width: 968px) {
-                grid-template-columns: 1fr;
+            @media (max-width: 768px) {
                 padding: 1.5rem;
-                gap: 2rem;
                 margin-bottom: 2rem;
             }
         ">
-            <div>
+            <div style="
+                margin-bottom: 2rem;
+                @media (max-width: 768px) {
+                    margin-bottom: 1.5rem;
+                }
+            ">
                 <h3 style="
                     color: var(--primary-color);
                     font-size: 2rem;
@@ -1760,10 +1750,8 @@
                     color: rgba(255, 255, 255, 0.9);
                     font-size: 1.2rem;
                     line-height: 1.8;
-                    margin-bottom: 1.5rem;
                     @media (max-width: 768px) {
                         font-size: 1.1rem;
-                        text-align: left;
                     }
                 ">
                     This isn't just an introduction – it's a comprehensive textbook guide to my proven method. I share exactly how I went from knowing no code to building and launching successful software applications, getting them into the App Store, and attracting high-paying clients online. Everything is covered: from your first steps to launching your first app and website.
@@ -1775,16 +1763,16 @@
                      width: 100%;
                      border-radius: 12px;
                      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-                     transform: perspective(1000px) rotateY(-5deg);
-                     transition: transform 0.3s ease;
+                     @media (min-width: 769px) {
+                         transform: perspective(1000px) rotateY(-5deg);
+                         transition: transform 0.3s ease;
+                     }
                      @media (max-width: 768px) {
-                         max-width: 400px;
-                         margin: 0 auto;
-                         display: block;
+                         transform: none;
                      }
                  "
-                 onmouseover="this.style.transform='perspective(1000px) rotateY(0deg)'"
-                 onmouseout="this.style.transform='perspective(1000px) rotateY(-5deg)'">
+                 onmouseover="if(window.innerWidth > 768) this.style.transform='perspective(1000px) rotateY(0deg)'"
+                 onmouseout="if(window.innerWidth > 768) this.style.transform='perspective(1000px) rotateY(-5deg)'">
         </div>
 
         <!-- Final CTA after PS sections -->
@@ -1803,7 +1791,7 @@
                    display: inline-block;
                    background: var(--primary-color);
                    color: white;
-                   padding: 1.5rem 4rem;
+                   padding: 1.5rem 2rem;
                    font-size: 1.6rem;
                    font-weight: 800;
                    border-radius: 12px;
@@ -1814,6 +1802,10 @@
                    letter-spacing: 1px;
                    width: 100%;
                    text-align: center;
+                   @media (max-width: 768px) {
+                       font-size: 1.3rem;
+                       padding: 1.2rem 1.5rem;
+                   }
                "
                onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 15px 30px rgba(255, 68, 68, 0.4)'"
                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(255, 68, 68, 0.3)'"
@@ -1933,3 +1925,5 @@
     </script>
 </body>
 </html> 
+
+
