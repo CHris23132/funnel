@@ -1427,7 +1427,7 @@
             align-items: start;
             @media (max-width: 768px) {
                 grid-template-columns: 1fr;
-                gap: 0;
+                gap: 2rem;
             }
         ">
             <div style="color: white;">
@@ -1560,7 +1560,11 @@
 
             <div style="
                 @media (max-width: 768px) {
-                    display: none;
+                    order: 2;
+                    margin-top: 2rem;
+                }
+                @media (min-width: 769px) {
+                    order: 1;
                 }
             ">
                 <img src="images/BookCover1.jpg" 
@@ -1574,9 +1578,13 @@
                          transition: transform 0.3s ease;
                          margin: 0 auto;
                          display: block;
+                         @media (max-width: 768px) {
+                             transform: none;
+                             max-width: 300px;
+                         }
                      "
-                     onmouseover="this.style.transform='perspective(1000px) rotateY(0deg)'"
-                     onmouseout="this.style.transform='perspective(1000px) rotateY(-5deg)'">
+                     onmouseover="if(window.innerWidth > 768) this.style.transform='perspective(1000px) rotateY(0deg)'"
+                     onmouseout="if(window.innerWidth > 768) this.style.transform='perspective(1000px) rotateY(-5deg)'">
             </div>
         </div>
     </section>
