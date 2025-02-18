@@ -1652,17 +1652,25 @@
                 padding: 2rem;
             }
         ">
-            <img src="images/app-social-proof.png" 
-                 alt="Community Consulting Sessions" 
-                 style="
-                     width: 100%;
-                     border-radius: 12px;
-                     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-                     transform: perspective(1000px) rotateY(5deg);
-                     transition: transform 0.3s ease;
-                 "
-                 onmouseover="this.style.transform='perspective(1000px) rotateY(0deg)'"
-                 onmouseout="this.style.transform='perspective(1000px) rotateY(5deg)'">
+            <div style="
+                background: white;
+                padding: 2rem;
+                border-radius: 12px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+                transform: perspective(1000px) rotateY(5deg);
+                transition: transform 0.3s ease;
+            "
+                onmouseover="this.style.transform='perspective(1000px) rotateY(0deg)'"
+                onmouseout="this.style.transform='perspective(1000px) rotateY(5deg)'"
+            >
+                <img src="images/class-pic.png" 
+                     alt="Community Consulting Sessions" 
+                     style="
+                         width: 100%;
+                         border-radius: 8px;
+                         display: block;
+                     ">
+            </div>
             <div>
                 <h3 style="
                     color: var(--primary-color);
