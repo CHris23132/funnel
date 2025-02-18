@@ -1421,12 +1421,15 @@
         <div style="
             max-width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 4rem;
-            align-items: start;
+            @media (min-width: 769px) {
+                display: grid;
+                grid-template-columns: 1.2fr 1fr;
+                gap: 4rem;
+                align-items: start;
+            }
             @media (max-width: 768px) {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
                 gap: 2rem;
             }
         ">
@@ -1556,35 +1559,6 @@
                 >
                     Claim Offer Now
                 </a>
-            </div>
-
-            <div style="
-                @media (max-width: 768px) {
-                    order: 2;
-                    margin-top: 2rem;
-                }
-                @media (min-width: 769px) {
-                    order: 1;
-                }
-            ">
-                <img src="images/BookCover1.jpg" 
-                     alt="App Development Blueprint Book Cover" 
-                     style="
-                         width: 100%;
-                         max-width: 400px;
-                         border-radius: 16px;
-                         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-                         transform: perspective(1000px) rotateY(-5deg);
-                         transition: transform 0.3s ease;
-                         margin: 0 auto;
-                         display: block;
-                         @media (max-width: 768px) {
-                             transform: none;
-                             max-width: 300px;
-                         }
-                     "
-                     onmouseover="if(window.innerWidth > 768) this.style.transform='perspective(1000px) rotateY(0deg)'"
-                     onmouseout="if(window.innerWidth > 768) this.style.transform='perspective(1000px) rotateY(-5deg)'">
             </div>
         </div>
     </section>
